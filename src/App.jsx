@@ -1,33 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { BottomNavigation, BottomNavigationAction, Box, Drawer, IconButton, InputAdornment, List, ListItem, ListItemButton, ListItemIcon, ListItemText, TextField, } from '@mui/material'
 
+import { useState } from 'react'
+import { Container } from '@mui/system';
+import Nav from './Components/Nav';
+import { GiForkKnifeSpoon } from 'react-icons/gi';
+import { RiFileList3Line,RiCalendarEventLine } from 'react-icons/ri';
+import { MdOutlineChat, MdClose } from 'react-icons/md';
+import { TbMath} from 'react-icons/tb';
+import DrawerComponent from './Components/Drawer';
+import {Button, Input} from '@mui/joy'
 function App() {
-  const [count, setCount] = useState(0)
+  const [open, setOpen] = useState(false)
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <Box>
+      <Nav open = {open} setOpen ={setOpen}/>
+      <DrawerComponent open = {open} setOpen ={setOpen}/>
+      <Container sx={{paddingTop: '1em'}}>
+      <Input  startAdornment={
+            <InputAdornment position="start">
+              <TbMath />
+            </InputAdornment>
+          }
+fullWidth label="fullWidth" id="fullWidth" />
+      </Container>
+    </Box>
   )
 }
 
