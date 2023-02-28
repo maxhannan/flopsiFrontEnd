@@ -8,6 +8,7 @@ import {GiCook} from 'react-icons/gi'
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Nav({open, setOpen}) {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -22,7 +23,7 @@ export default function Nav({open, setOpen}) {
   };
 
   return (
-      <AppBar position="static"  elevation={0} sx ={{bgcolor: '#ffffff', borderBottom: 1, borderColor: '#c2c2c2'}} >
+      <AppBar position="fixed"  elevation={0} sx ={{bgcolor: '#ffffff', borderBottom: 1, borderColor: '#c2c2c2'}} >
         <Toolbar>
           <IconButton
             size="large"
@@ -39,6 +40,7 @@ export default function Nav({open, setOpen}) {
           </Typography>
         
             <div>
+            
               <IconButton
                 size="large"
                 aria-label="account of current user"
