@@ -12,11 +12,10 @@ function Root() {
   return (
     <Box>
       <Nav open = {open} setOpen ={setOpen}/>
-      <DrawerComponent open = {open} setOpen ={setOpen}/>
-      <Container sx={{paddingTop: '5em'}}>
-      <Outlet/>
-    
+      <Container sx={{paddingY: '5em'}}>
+        <Outlet/>
       </Container>
+      <DrawerComponent open = {open} setOpen ={setOpen}/>
     </Box>
   )
 }

@@ -8,11 +8,14 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { CssBaseline } from '@mui/material';
 import ErrorPage from "./Error";
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import Recipes from './pages/Recipes';
+const theme = createTheme()
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,6 +32,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <CssBaseline />
+    <ThemeProvider theme={theme}>
+    
     <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>,
 )

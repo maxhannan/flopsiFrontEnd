@@ -1,75 +1,67 @@
-import { GiForkKnifeSpoon } from 'react-icons/gi';
+import { GiCook, GiForkKnifeSpoon } from 'react-icons/gi';
 import { RiFileList3Line,RiCalendarEventLine } from 'react-icons/ri';
 import { MdOutlineChat, MdClose } from 'react-icons/md';
 import { TbMath} from 'react-icons/tb';
-import { BottomNavigation, BottomNavigationAction, Box, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, } from '@mui/material'
+import { BottomNavigation, BottomNavigationAction, Box, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Paper, } from '@mui/material'
 import { Link ,useNavigate} from 'react-router-dom';
+import { useState } from 'react';
 
 const DrawerComponent = ({open, setOpen}) => {
+  const [value, setValue] = useState('user');
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   const navigate = useNavigate();
   return (  
-  <Drawer elevation={0} 
-    anchor={'top'}
-    open={open}
-    onClose ={()=> setOpen(false)}
-    variant = 'persistent'
-  >
-    <Box
-      sx={{ width: 'auto', display: 'flex'}}
-      role="presentation"
-      onClick={()=> setOpen(false)}
-      onKeyDown={()=> setOpen(false)}
+    <Paper elevation={2} sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} 
     >
-      <BottomNavigation   sx ={{ display:'flex', borderBottom: 0, borderColor: '#c2c2c2', width: '100vw', height: 'auto'}} >
-      
-       <BottomNavigationAction
-        label="Recents"
-        value="recents"
-        onClick={()=> navigate('/') }
-        icon={<MdClose color='#37474f' size ='3em'/>}
-         />
+      <BottomNavigation
+          value={value} onChange={handleChange}
+          
+           sx ={{ display:'flex', borderTop: 1, borderColor: '#c2c2c2', width: '100vw', height: 'auto'}} >
+        <BottomNavigationAction
+          label="User"
+          value="user"
          
-     
-          <BottomNavigationAction
-          label="Recents"
-          value="recents"
+          
           onClick={()=> navigate('/') }
-          icon={<RiFileList3Line color='#37474f'  size ='3em'/>}
-          />
- 
-        
-          <BottomNavigationAction
-          label="Recents"
-          value="recents"
+          icon={<GiCook  size ='3em'/>}
+        />
+        <BottomNavigationAction
+          label="Prep"
+          value="prep"
+          onClick={()=> navigate('/') }
+          icon={<RiFileList3Line   size ='3em'/>}
+        />
+        <BottomNavigationAction
+          label="Recipes"
+          value="recipes"
           onClick={()=> navigate('/recipes') }
-          icon={<GiForkKnifeSpoon color='#37474f' size ='3em'/>}
-          />
-       
-   
-          <BottomNavigationAction
-          label="Recents"
-          value="recents"
+          icon={<GiForkKnifeSpoon  size ='3em'/>}
+        />
+        <BottomNavigationAction
+          label="Convert"
+          value="convert"
           onClick={()=> navigate('/') }
-          icon={<TbMath color='#37474f' size ='3em'/>}
-          />
-     
-          <BottomNavigationAction
-          label="Recents"
-          value="recents"
+          icon={<TbMath  size ='3em'/>}
+        />
+        <BottomNavigationAction
+          label="Calendar"
+          value="calendar"
           onClick={()=> navigate('/') }
-          icon={<RiCalendarEventLine color='#37474f' size ='3em'/>}
-          />
-   
-          <BottomNavigationAction
-          label="Recents"
-          value="recents"
+          icon={<RiCalendarEventLine  size ='3em'/>}
+        />
+        <BottomNavigationAction
+          label="Chat"
+          value="chat"
           onClick={()=> navigate('/') }
-          icon={<MdOutlineChat color='#37474f' size ='3em'/>}
-          />
+          icon={<MdOutlineChat size ='3em'/>}
+        />
+      </BottomNavigation>
+    </Paper>
 
-</BottomNavigation>
-  </Box>
-  </Drawer>
   );
 }
  
