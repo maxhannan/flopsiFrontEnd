@@ -34,8 +34,8 @@ export default function Nav({open, setOpen}) {
           >
             <MdMenu size ='1.5em' color='#37474f'/>
           </IconButton>
-          <Typography variant="h6" component="div"color='#37474f' sx={{ flexGrow: 1 }}>
-           
+          <Typography variant="h6" component="div"color='#37474f' sx={{ flexGrow: 1, textAlign: 'center' }}>
+            Recipes
           </Typography>
         
             <div>
