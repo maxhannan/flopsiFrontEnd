@@ -1,6 +1,6 @@
 import { Avatar, Card, CardActionArea, CardHeader, IconButton } from "@mui/material";
 import { v4 as uuidv4 } from 'uuid';
-import { red } from '@mui/material/colors';
+import { purple } from '@mui/material/colors';
 import { MdOutlineChevronRight } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 const RecipeSummary = () => {
@@ -10,7 +10,7 @@ const RecipeSummary = () => {
        <CardActionArea onClick={() => navigate(`/recipes/${uuidv4()}`)}>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+          <Avatar sx={{ bgcolor: purple[300] }} aria-label="recipe">
             MH
           </Avatar>
         }

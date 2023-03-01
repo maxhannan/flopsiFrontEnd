@@ -1,4 +1,4 @@
-import { Avatar, BottomNavigation, BottomNavigationAction, Box, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Drawer, IconButton, InputAdornment, List, ListItem, ListItemAvatar, ListItemButton, ListItemIcon, ListItemText, TextField, } from '@mui/material'
+import { Box, Button, Dialog,  DialogContent,  TextField, } from '@mui/material'
 import { Container } from '@mui/system';
 
 const DialogCategory = ({open, handleDialogClose}) => {
@@ -13,7 +13,7 @@ const DialogCategory = ({open, handleDialogClose}) => {
         <Container>
         <DialogContent>
           <Box sx={{display: 'flex'}}>
-          <TextField fullWidth label ='category'/>
+          <TextField fullWidth label ='Category'/>
           <Button onClick={handleDialogClose} >Add</Button>
           </Box>
         </DialogContent>
