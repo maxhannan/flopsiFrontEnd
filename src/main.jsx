@@ -1,7 +1,7 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Root from './root'
+import Root, { loader as rootLoader }  from './root'
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -15,6 +15,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Recipes from './pages/Recipes';
+import Recipe from './pages/Recipe';
 const theme = createTheme()
 const router = createBrowserRouter([
   {
@@ -25,6 +26,11 @@ const router = createBrowserRouter([
       {
         path: "recipes",
         element: <Recipes />,
+      },
+      {
+        path: "recipes/:recipeId",
+        element: <Recipe />,
+        loader: rootLoader,
       },
     ],
   },
