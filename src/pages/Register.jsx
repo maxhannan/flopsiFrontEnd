@@ -111,7 +111,7 @@ export default function Register() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-              <Link to="/login" >
+              <Link to="/auth/login" >
                   <Typography color ='primary' variant='body2'>Already have an account? Sign in</Typography>
                 </Link>
       

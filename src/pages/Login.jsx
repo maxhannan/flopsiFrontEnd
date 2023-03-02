@@ -84,13 +84,13 @@ export default function Login() {
             </Button>
             <Grid container>
               <Grid item xs>
-              <Link to="/register" >
+              <Link to="/auth/register" >
                   <Typography color ='primary' variant='body2'>Forgot password?</Typography>
                 </Link>
                 
               </Grid>
               <Grid item>
-                <Link to="/register" >
+                <Link to="/auth/register" >
                   <Typography color ='primary' variant='body2'>Don't have an account? Sign Up</Typography>
                 </Link>
               </Grid>

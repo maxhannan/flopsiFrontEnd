@@ -22,58 +22,55 @@ import AuthLayout from './pages/AuthLayout';
 const theme = createTheme()
 const router = createBrowserRouter([
   {
+    path: '/auth',
+    element: <AuthLayout />,
+    errorElement: <ErrorPage/>,
+    children: [
+      {
+        path: "login",
+        element: <Login />,
+       
+      },
+      {
+        path: "Register",
+        element: <Register />,
+      },
+    ]
+  },
+  {
     path: "/",
+    element: <Root />,
     errorElement: <ErrorPage />,
     children: [
       {
-        element: <AuthLayout />,
-        children: [
-          {
-            path: "login",
-            element: <Login />,
-           
-          },
-          {
-            path: "Register",
-            element: <Register />,
-          },
-        ],
+        path: "recipes",
+        element: <Recipes />,
       },
       {
-        element: <Root />,
-        children: [
-          {
-            path: "recipes",
-            element: <Recipes />,
-          },
-          {
-            path: "recipes/:recipeId",
-            element: <Recipe />,
-            loader: recipeLoader,
-          },
-          {
-            path: "prep",
-            
-          },
-          {
-            path: "calendar",
-            
-          
-          },
-          {
-            path: "chat",
-         
+        path: "recipes/:recipeId",
+        element: <Recipe />,
+        loader: recipeLoader,
+      },
+      {
+        path: "prep",
+        
+      },
+      {
+        path: "calendar",
+        
       
-          },
-          {
-            path: "convert",
-         
-      
-          },
-        ]
-      }
-      
+      },
+      {
+        path: "Chat",
      
+  
+      },
+      {
+        path: "convert",
+     
+  
+      },
+      
     ],
   },
 ]);

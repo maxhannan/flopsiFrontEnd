@@ -62,7 +62,7 @@ const navigate = useNavigate()
                 <MenuItem onClick={handleClose}>Add Recipe</MenuItem>
                 <MenuItem onClick={openMenu}>Add Category</MenuItem>
               </Menu>
-              <IconButton variant='outlined' size='large' color='secondary' onClick ={()=> navigate('/login')} sx ={{ml: '1rem'}}><GiCook /></IconButton>
+              <IconButton variant='outlined' size='large' color='secondary' onClick ={()=> navigate('/auth/login')} sx ={{ml: '1rem'}}><GiCook /></IconButton>
             </div>    
           </Toolbar>
 
