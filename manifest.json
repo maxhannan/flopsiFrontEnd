@@ -1,0 +1,13 @@
+{ 
+
+  "name": "WebsiteName", 
+
+  "short_name": "WebName", 
+
+
+
+  "display": "standalone"
+
+
+
+}
