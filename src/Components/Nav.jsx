@@ -5,15 +5,19 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import { useState } from 'react';
 import  Button  from '@mui/material/Button';
-import { MdAdd, MdOutlineFilterList } from 'react-icons/md';
+import { MdAdd, MdDarkMode, MdOutlineFilterList } from 'react-icons/md';
 import { Box, Container } from '@mui/system';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { IconButton } from '@mui/material';
+import { GiCook } from 'react-icons/gi';
 
 export default function Nav({open, handleDialogOpen}) {
+  console.log(useLocation())
   function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
-  const location = capitalizeFirstLetter(useLocation().pathname.replace('/',''))
+const navigate = useNavigate()
+  const location = capitalizeFirstLetter(useLocation().pathname.replace('/','').slice(0,7))
 
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -31,16 +35,13 @@ export default function Nav({open, handleDialogOpen}) {
 
   return (
    
-      <AppBar position="fixed"  elevation={0} sx ={{bgcolor: '#ffffff', borderBottom: 1, borderColor: '#c2c2c2'}} >
-        <Container>
+      <AppBar position="fixed"  elevation={0} sx ={{bgcolor: '#ffffff', borderBottom: 1, borderColor: '#c2c2c2', }} >
+
         <Toolbar>
-   
-          <Typography variant="h5" component="div"color='#37474f' sx={{ flexGrow: 1}}>
+          <Typography variant="h5" component="div"color='secondary' sx={{ flexGrow: 1}}>
             {location}
           </Typography> 
-        
-            <div>
-            
+          <div>
             <Button variant='outlined' elevation='0' startIcon={<MdAdd />} color='secondary' onClick={handleMenu}>Add</Button>
               <Menu
                 id="menu-appbar"
@@ -61,10 +62,10 @@ export default function Nav({open, handleDialogOpen}) {
                 <MenuItem onClick={handleClose}>Add Recipe</MenuItem>
                 <MenuItem onClick={openMenu}>Add Category</MenuItem>
               </Menu>
-            </div>
-          
-        </Toolbar>
-        </Container>
+              <IconButton variant='outlined' size='large' color='secondary' onClick ={()=> navigate('/login')} sx ={{ml: '1rem'}}><GiCook /></IconButton>
+            </div>    
+          </Toolbar>
+
       </AppBar>
       
     

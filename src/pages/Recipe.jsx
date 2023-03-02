@@ -11,7 +11,7 @@ const Recipe = ({params}) => {
   const recipe = useLoaderData()
   return (  
     <Container>
-      <Box sx ={{display: 'flex',}}>
+      <Box sx ={{display: 'flex', mb: '.25rem'}}>
         <Box sx ={{flexGrow:1}}>
         <Typography variant='h4' >
       Saffron Mayo
@@ -36,19 +36,20 @@ const Recipe = ({params}) => {
       </Box>
       </Box>
    <Grid container spacing={3}>
-   <Grid item xs ={12} sm={12} md ={6}>
+   <Grid  item xs ={12} sm={12} md ={6}>
       <IngredientTable/>
       </Grid>
       <Grid item xs ={12}  sm={12} md ={6}>
-        <Box sx ={{height: '70vh', overflow:'scroll'}}>
+        <Box sx ={{height: '70vh', width: '100%', overflow:'scroll'}}>
         <Typography variant='h4' >
       Process
       </Typography> 
-      <Typography variant='overline' color='secondary'>
-        Step 1
+      <Divider  sx={{marginY:'.5rem'}}/>
+      <Typography variant='overline' color='secondary' >
+        Step 1 
       </Typography>
       <Typography variant='body2'>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio nam ex impedit expedita autem neque velit at doloremque maiores ea, quae explicabo reiciendis illum quasi sint iure libero, enim reprehenderit.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio nam ex  exp autem neque velit at doloremque maiores ea, quae explicabo reiciendis illum quasi sint iure libero, enim reprehenderit.
       </Typography>
       <Typography variant='overline' color ='secondary'>
         Step 2

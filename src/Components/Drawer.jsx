@@ -10,7 +10,7 @@ import { styled } from "@mui/material/styles";
 
 const MuiBottomNavigationAction  = styled(BottomNavigationAction)(`
   &.Mui-selected {
-    color: ${purple[300]};
+    color: ${purple[400]};
   }
 `);
 const DrawerComponent = ({open, setOpen}) => {
@@ -23,48 +23,43 @@ const DrawerComponent = ({open, setOpen}) => {
   };
  
   return (  
-    <Paper elevation={2} sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} 
+    
+    <Paper elevation={2} sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, width: '100vw' }} 
     >
       <BottomNavigation
           value={value} onChange={handleChange}
-           sx ={{ display:'flex', borderTop: 1, borderColor: '#c2c2c2', width: '100vw', height: 'auto'}} >
-        <MuiBottomNavigationAction
-          label="User"
-         
-          value="user"
-          onClick={()=> navigate('/') }
-          icon={<GiCook  size ='3em'/>}
-        />
+           sx ={{  borderTop: 1, borderColor: '#c2c2c2', height: 'auto',}} >
+       
         <MuiBottomNavigationAction
           label="Prep"
           value="prep"
           
           onClick={()=> navigate('/') }
-          icon={<RiFileList3Line   size ='3em'/>}
+          icon={<RiFileList3Line   size ='2rem'/>}
         />
         <MuiBottomNavigationAction
           label="Recipes"
           value="/recipes"
           onClick={()=> navigate('/recipes') }
-          icon={<GiForkKnifeSpoon  size ='3em'/>}
+          icon={<GiForkKnifeSpoon  size ='2rem'/>}
         />
         <MuiBottomNavigationAction
           label="Convert"
           value="convert"
           onClick={()=> navigate('/') }
-          icon={<TbMath  size ='3em'/>}
+          icon={<TbMath  size ='2rem'/>}
         />
         <MuiBottomNavigationAction
           label="Calendar"
           value="calendar"
           onClick={()=> navigate('/') }
-          icon={<RiCalendarEventLine  size ='3em'/>}
+          icon={<RiCalendarEventLine  size ='2rem'/>}
         />
         <MuiBottomNavigationAction
           label="Chat"
           value="chat"
           onClick={()=> navigate('/') }
-          icon={<MdOutlineChat size ='3em'/>}
+          icon={<MdOutlineChat size ='2rem'/>}
         />
       </BottomNavigation>
     </Paper>

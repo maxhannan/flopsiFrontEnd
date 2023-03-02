@@ -24,7 +24,7 @@ function Root() {
   return (
     <Box>
       <Nav open = {open} handleDialogOpen ={handleDialogOpen}/>
-      <Container sx={{paddingY: '5em'}}>
+      <Container maxWidth ='xl' sx={{paddingY: '5em', paddingX:'0'}}>
         <Outlet/>
         <DialogCategory open={open} handleDialogClose={handleDialogClose}/>
       </Container>

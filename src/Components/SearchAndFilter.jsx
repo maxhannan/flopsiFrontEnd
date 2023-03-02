@@ -9,9 +9,10 @@ const SearchAndFilter = () => {
 
   return ( 
     <Box display='flex'>
-    <TextField fullWidth label="Search Recipes" sx ={{width: '65%'}}  />
+    <TextField fullWidth color='secondary' label="Search Recipes" sx ={{width: '65%'}}  />
     <FormControl sx ={{width: '34%', marginLeft: 'auto'}} >
       <Select
+      color='secondary'
         labelId="demo-simple-select-label"
         id="demo-simple-select"
         value={menu}

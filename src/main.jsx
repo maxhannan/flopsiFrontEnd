@@ -16,6 +16,8 @@ import {
 } from "react-router-dom";
 import Recipes from './pages/Recipes';
 import Recipe from './pages/Recipe';
+import Login from './pages/Login';
+import Register from './pages/Register';
 const theme = createTheme()
 const router = createBrowserRouter([
   {
@@ -31,6 +33,14 @@ const router = createBrowserRouter([
         path: "recipes/:recipeId",
         element: <Recipe />,
         loader: rootLoader,
+      },
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "Register",
+        element: <Register />,
       },
     ],
   },

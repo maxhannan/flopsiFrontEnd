@@ -10,8 +10,8 @@ const RecipeSummary = () => {
        <CardActionArea onClick={() => navigate(`/recipes/${uuidv4()}`)}>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: purple[300] }} aria-label="recipe">
-            MH
+          <Avatar sx={{ bgcolor: purple[400] }} aria-label="recipe">
+            RF
           </Avatar>
         }
         action={
@@ -19,8 +19,8 @@ const RecipeSummary = () => {
             <MdOutlineChevronRight />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
-        subheader="Breads/Crackers/Wraps"
+        title="Saffron Mayo"
+        subheader="Sauces"
       />
       </CardActionArea>
       </Card>
