@@ -42,7 +42,15 @@ const navigate = useNavigate()
             {location}
           </Typography> 
           <div>
-            <Button variant='outlined' elevation='0' startIcon={<MdAdd />} color='secondary' onClick={handleMenu}>Add</Button>
+            <Button 
+              variant='outlined' 
+              elevation='0' 
+              startIcon={<MdAdd />} 
+              color='secondary' 
+              onClick={handleMenu}
+            >
+              Add
+            </Button>
               <Menu
                 id="menu-appbar"
                 anchorEl={anchorEl}
@@ -59,10 +67,24 @@ const navigate = useNavigate()
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Add Recipe</MenuItem>
-                <MenuItem onClick={openMenu}>Add Category</MenuItem>
+                <MenuItem 
+                  onClick={handleClose}>
+                  Add Recipe
+                </MenuItem>
+                <MenuItem 
+                  onClick={openMenu}>
+                  Add Category
+                </MenuItem>
               </Menu>
-              <IconButton variant='outlined' size='large' color='secondary' onClick ={()=> navigate('/auth/login')} sx ={{ml: '1rem'}}><GiCook /></IconButton>
+              <IconButton 
+                variant='outlined' 
+                size='large' 
+                color='secondary' 
+                onClick ={()=> navigate('/auth/login')} 
+                sx ={{ml: '1rem'}}
+              >
+                <GiCook />
+              </IconButton>
             </div>    
           </Toolbar>
 
