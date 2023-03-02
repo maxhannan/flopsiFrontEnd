@@ -1,7 +1,7 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Root, { loader as rootLoader }  from './root'
+import Root, { recipeLoader }  from './root'
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       {
         path: "recipes/:recipeId",
         element: <Recipe />,
-        loader: rootLoader,
+        loader: recipeLoader,
       },
       {
         path: "login",

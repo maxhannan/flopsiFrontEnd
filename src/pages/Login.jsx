@@ -28,7 +28,7 @@ export default function Login() {
   };
 
   return (
-    <ThemeProvider theme={theme}>
+
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
@@ -48,6 +48,7 @@ export default function Login() {
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
+              color='secondary'
               required
               fullWidth
               id="email"
@@ -60,6 +61,7 @@ export default function Login() {
               margin="normal"
               required
               fullWidth
+              color='secondary'
               name="password"
               label="Password"
               type="password"
@@ -72,6 +74,7 @@ export default function Login() {
             />
             <Button
               type="submit"
+              color='secondary'
               fullWidth
               disableElevation
               variant="contained"
@@ -95,6 +98,6 @@ export default function Login() {
           </Box>
         </Box>
       </Container>
-    </ThemeProvider>
+   
   );
 }

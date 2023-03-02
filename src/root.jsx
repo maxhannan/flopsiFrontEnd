@@ -7,7 +7,8 @@ import DrawerComponent from './Components/Drawer';
 import { Outlet } from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
 import DialogCategory from './Components/DialogCategory';
-export async function loader({params}) {
+
+export async function recipeLoader({params}) {
   const contacts = params.recipeId;
   return  contacts ;
 } 

@@ -1,20 +1,33 @@
 import {  Container, Divider, Grid, IconButton, Typography } from "@mui/material";
 import { Box } from "@mui/system";
+import { useState } from "react";
 import {  MdClose, MdOutlineEditNote } from "react-icons/md";
 import { TbScaleOutline } from "react-icons/tb";
 import { useLoaderData, useNavigate } from "react-router-dom";
+import FullScreenDialog from "../Components/FullDialog";
 import IngredientTable from "../Components/IngredientTable";
 
 const Recipe = ({params}) => {
   console.log(params)
   const navigate = useNavigate()
   const recipe = useLoaderData()
+    const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  console.log(useLoaderData())
   return (  
     <Container>
       <Box sx ={{display: 'flex', mb: '.25rem'}}>
         <Box sx ={{flexGrow:1}}>
         <Typography variant='h4' >
-      Saffron Mayo
+        Saffron Mayo {recipe.slice(0,5)}
       </Typography>
       <Typography sx ={{mr: 'auto'}} variant='overline'>
         Ricky Flor
@@ -29,7 +42,7 @@ const Recipe = ({params}) => {
       <IconButton><TbScaleOutline/></IconButton>
       </Box>
       <Box >
-      <IconButton><MdOutlineEditNote/></IconButton>
+      <IconButton onClick ={()=> setOpen(true)}><MdOutlineEditNote/></IconButton>
       </Box>
       <Box >
       <IconButton  onClick = {() => navigate('/recipes')}><MdClose/></IconButton>
@@ -80,7 +93,7 @@ const Recipe = ({params}) => {
       </Grid>
         </Grid>
     
-
+    <FullScreenDialog open ={open} handleClickOpen ={handleClickOpen} handleClose={handleClose}/>
     </Container>
   );
 }
