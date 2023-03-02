@@ -30,11 +30,11 @@ export default function IngredientTable() {
     { id: uuidv4(), name: 'White Wine Vinegar', qty: 1000, unit: 'gr'},
    
   ];
-  const autoH = rows.length > 9 ? false: true 
+  const autoH = rows.length > 8 ? false: true 
   return (
     <div style={{ width: '100%' }}>
       <DataGrid
-        sx ={{ height: '70vh'}}
+        sx ={{ height: '65vh'}}
         autoHeight ={autoH}
  
         rows={rows}

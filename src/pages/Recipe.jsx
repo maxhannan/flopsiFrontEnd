@@ -53,7 +53,7 @@ const Recipe = ({params}) => {
       <IngredientTable/>
       </Grid>
       <Grid item xs ={12}  sm={12} md ={6}>
-        <Box sx ={{height: '70vh', width: '100%', overflow:'scroll'}}>
+        <Box sx ={{height: '65vh', width: '100%', overflow:'scroll'}}>
         <Typography variant='h4' >
       Process
       </Typography> 

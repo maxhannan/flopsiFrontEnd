@@ -28,7 +28,7 @@ const DrawerComponent = ({open, setOpen}) => {
     >
       <BottomNavigation
           value={value} onChange={handleChange}
-           sx ={{  borderTop: 1, borderColor: '#c2c2c2', height: 'auto',}} >
+           sx ={{  borderTop: 1, borderColor: '#c2c2c2', height: '6rem',}} >
        
         <MuiBottomNavigationAction
           label="Prep"
