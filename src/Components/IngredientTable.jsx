@@ -22,13 +22,7 @@ export default function IngredientTable() {
     { id: uuidv4(), name: 'White Wine Vinegar', qty: 1000, unit: 'gr'},
     { id: uuidv4(), name: 'White Wine Vinegar', qty: 1000, unit: 'gr'},
     { id: uuidv4(), name: 'White Wine Vinegar', qty: 1000, unit: 'gr'}, 
-    { id: uuidv4(), name: 'White Wine Vinegar', qty: 1000, unit: 'gr'},
-    { id: uuidv4(), name: 'White Wine Vinegar', qty: 1000, unit: 'gr'},
-    { id: uuidv4(), name: 'White Wine Vinegar', qty: 1000, unit: 'gr'},
-    { id: uuidv4(), name: 'White Wine Vinegar', qty: 1000, unit: 'gr'},
-    { id: uuidv4(), name: 'White Wine Vinegar', qty: 1000, unit: 'gr'},
-    { id: uuidv4(), name: 'White Wine Vinegar', qty: 1000, unit: 'gr'},
-   
+    
   ];
   const autoH = rows.length > 8 ? false: true 
   return (
