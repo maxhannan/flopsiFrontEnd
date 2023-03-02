@@ -34,7 +34,7 @@ const DrawerComponent = ({open, setOpen}) => {
           label="Prep"
           value="prep"
           
-          onClick={()=> navigate('/') }
+          onClick={()=> navigate('/prep') }
           icon={<RiFileList3Line   size ='2rem'/>}
         />
         <MuiBottomNavigationAction
@@ -46,19 +46,19 @@ const DrawerComponent = ({open, setOpen}) => {
         <MuiBottomNavigationAction
           label="Convert"
           value="convert"
-          onClick={()=> navigate('/') }
+          onClick={()=> navigate('/convert') }
           icon={<TbMath  size ='2rem'/>}
         />
         <MuiBottomNavigationAction
           label="Calendar"
           value="calendar"
-          onClick={()=> navigate('/') }
+          onClick={()=> navigate('/calendar') }
           icon={<RiCalendarEventLine  size ='2rem'/>}
         />
         <MuiBottomNavigationAction
           label="Chat"
           value="chat"
-          onClick={()=> navigate('/') }
+          onClick={()=> navigate('/chat') }
           icon={<MdOutlineChat size ='2rem'/>}
         />
       </BottomNavigation>

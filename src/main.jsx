@@ -18,30 +18,62 @@ import Recipes from './pages/Recipes';
 import Recipe from './pages/Recipe';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import AuthLayout from './pages/AuthLayout';
 const theme = createTheme()
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root/>,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "recipes",
-        element: <Recipes />,
+        element: <AuthLayout />,
+        children: [
+          {
+            path: "login",
+            element: <Login />,
+           
+          },
+          {
+            path: "Register",
+            element: <Register />,
+          },
+        ],
       },
       {
-        path: "recipes/:recipeId",
-        element: <Recipe />,
-        loader: recipeLoader,
-      },
-      {
-        path: "login",
-        element: <Login />,
-      },
-      {
-        path: "Register",
-        element: <Register />,
-      },
+        element: <Root />,
+        children: [
+          {
+            path: "recipes",
+            element: <Recipes />,
+          },
+          {
+            path: "recipes/:recipeId",
+            element: <Recipe />,
+            loader: recipeLoader,
+          },
+          {
+            path: "prep",
+            
+          },
+          {
+            path: "calendar",
+            
+          
+          },
+          {
+            path: "chat",
+         
+      
+          },
+          {
+            path: "convert",
+         
+      
+          },
+        ]
+      }
+      
+     
     ],
   },
 ]);

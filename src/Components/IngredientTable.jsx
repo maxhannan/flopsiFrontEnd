@@ -9,7 +9,7 @@ export default function IngredientTable() {
   
   const matches = useMediaQuery('(min-width:1050px)');
   const columns = [
-    { field: 'name', headerName: 'Ingredient', width: ! matches ? '200' : '255'},
+    { field: 'name', headerName: 'Ingredient', width: ! matches ? '180' : '255'},
     { field: 'qty', headerName: 'Qty', width: ! matches ? '55' : '100' },
     { field: 'unit', headerName: 'Unit',  width:  ! matches ? '30' : '75'},
     
