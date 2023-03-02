@@ -27,7 +27,7 @@ const Recipe = ({params}) => {
       <Box sx ={{display: 'flex', mb: '.25rem'}}>
         <Box sx ={{flexGrow:1}}>
         <Typography variant='h4' >
-        Saffron Mayo {recipe.slice(0,5)}
+        Saffron Mayo 
       </Typography>
       <Typography sx ={{mr: 'auto'}} variant='overline'>
         Ricky Flor
